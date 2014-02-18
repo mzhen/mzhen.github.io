@@ -4,8 +4,12 @@ body{
 }
 
 p{
-	font-size:20pt;
+	font-size:10pt;
 	-webkit-animation: type 6s;
+}
+
+h1{
+	font-size:30px;
 }
 
 .links{
