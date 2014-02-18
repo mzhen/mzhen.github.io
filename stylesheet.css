@@ -1,16 +1,20 @@
-p{
-	font-size:20px;
+body{
 	font-family:sans-serif;
-	-webkit-animation: type 6s;
+	margin-left:-2px;
 }
 
-br{
-	height:5px;
-
+p{
+	font-size:20pt;
+	-webkit-animation: type 6s;
 }
 
 .links{
 	margin-left:0px;
+	font-size:9pt;
+}
+
+a{
+	
 }
 
 @-webkit-keyframes type{
