@@ -1,0 +1,20 @@
+p{
+	font-size:20px;
+	font-family:sans-serif;
+}
+
+br{
+	height:5px;
+
+}
+
+.type{
+	-webkit-animation:type 6s;
+}
+
+@keyframes type{
+	from{
+		width:0;
+	}
+
+}
