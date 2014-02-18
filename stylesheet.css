@@ -9,8 +9,16 @@ br{
 
 }
 
+.links{
+	margin-left:0px;
+}
+
 @-webkit-keyframes type{
 	from{
 		width:0;
 	}
 }
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
