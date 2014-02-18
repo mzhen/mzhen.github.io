@@ -1,6 +1,7 @@
 p{
 	font-size:20px;
 	font-family:sans-serif;
+	-webkit-animation: type 6s;
 }
 
 br{
@@ -8,13 +9,8 @@ br{
 
 }
 
-.type{
-	-webkit-animation:type 6s;
-}
-
-@keyframes type{
+@-webkit-keyframes type{
 	from{
 		width:0;
 	}
-
 }
