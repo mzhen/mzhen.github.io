@@ -1,5 +1,6 @@
 body{
 	font-family:sans-serif;
+	margin:30px;
 }
 
 p{
@@ -11,12 +12,11 @@ p{
 }
 
 h1{
-	font-size:30px;
+	font-size:30pt;
 }
 
 .links{
-	margin-left:0px;
-	font-size:9pt;
+	font-size:10pt;
 }
 
 @-webkit-keyframes type{
