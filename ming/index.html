@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,500,700' rel='stylesheet' type='text/css'>
+	<link href="style.css" rel="stylesheet" type"text/css">
+	<title></title>
+	<style>
+
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="external_javascript.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+
+			var rotate = function() {
+			  $("body")
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/a1.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/a2.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/a3.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/a4.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b1.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b2.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b3.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b4.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b5.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b6.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/b7.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c1.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c2.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c3.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c4.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c5.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/c6.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/f1.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/f2.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/f3.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/f4.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/f5.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/h1.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/h2.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/h3.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/h4.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function() {
+			        $(this).css({
+			            "background-image": "url(screen/h5.jpg)"
+			        });
+			        $(this).dequeue();
+			    })
+
+			    .delay(2500).queue(function(next) {
+			        $(this).css({
+			            "background-image": "url(screen/h6.jpg)"
+			        });
+			        $(this).dequeue();
+			        next();
+			    })
+			    .queue(rotate);
+			};
+
+		rotate();
+
+		});	
+	</script>
+
+</head>
+<body>
+	<nav>
+	<ul>
+		<li onClick="randomlinksberl()" id="berlin">#Berlin</li>
+		<li onClick="randomlinkscopen()" id="copenhagen">#Copenhagen</li>
+		<li onClick="randomlinkshels()" id="helsinki">#Helsinki</li>
+		<li onClick="randomlinksoslo()" id="oslo">#Oslo</li>
+		<li onClick="randomlinksstoc()" id="stockholm">#Stockholm</li>
+		<li onClick="randomlinkstali()" id="talinn">#Talinn</li>
+	</ul>
+	</nav>
+
+	<div class="title">
+	A website documenting my summer travels in 2014, for our fragile relationships and our ever-shifting memories.
+	</div>
+
+	<div class="photo"></div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family:'Roboto';
+}
+
+.photo{
+	/*background-color:orange;*/
+	height:100%;
+	width:60%;
+	position:absolute;
+	top:0px;
+	left:0;
+	background-size:contain;
+	background-repeat:no-repeat;
+/*	background-position:center;*/
+	/*z-index:3;*/
+}
+
+.title{
+	position:relative;
+	font-size:5.5em;
+	top:40px;
+	left:27px;
+	width:1000px;
+	color:rgb(212,11,111);
+}
+
+a:link{
+	color:rgb(21,64,196);
+}
+a:hover{
+	color:rgb(212,11,111);
+}
+
+
+nav{
+	position:absolute;
+	z-index:3;
+	top:10px;
+	left:20px;
+	/*background-color:white;*/
+}
+ul{
+	list-style: none;
+	padding-left:0;
+	font-size:1.5em;
+	font-weight:500;
+	margin:5px 15px;
+}
+li{
+	margin-bottom:5px;
+	cursor:pointer;
+	display:inline-block;
+}
+li:hover{
+	color:rgb(212,11,111);
+	background-color:#fff;
+}
+
+
+@media (max-width: 1550px) {
+	.photo{
+		height:100%;
+		width:100%;
+		left:0%;
+		background-position:top left;
+		-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+	}
+}
+
+@media (max-width: 1000px) {
+	.photo{
+		height:100%;
+		width:100%;
+		left:0%;
+		background-position:top left;
+	}
+
+}
+
+@media (max-width: 500px) {
+
+	li{
+		display:inline-block;
+	}
+}
+
+
+
+/*Photoset Copenhagen*/
+	.photo.c1{
+		background-image:url('copenhagen/image-1.jpg');
+	}
+	.photo.c2{
+		background-image:url('copenhagen/image-2.jpg');
+	}
+	.photo.c3{
+		background-image:url('copenhagen/image-3.jpg');
+	}
+	.photo.c4{
+		background-image:url('copenhagen/image-4.jpg');
+	}
+	.photo.c5{
+		background-image:url('copenhagen/image-5.jpg');
+	}
+	.photo.c6{
+		background-image:url('copenhagen/image-6.jpg');
+	}
+	.photo.c7{
+		background-image:url('copenhagen/image-7.jpg');
+	}
+	.photo.c8{
+		background-image:url('copenhagen/image-8.jpg');
+	}
+	.photo.c9{
+		background-image:url('copenhagen/image-9.jpg');
+	}
+	.photo.c10{
+		background-image:url('copenhagen/image-10.jpg');
+	}
+	.photo.c11{
+		background-image:url('copenhagen/image-11.jpg');
+	}
+	.photo.c12{
+		background-image:url('copenhagen/image-12.jpg');
+	}
+	.photo.c13{
+		background-image:url('copenhagen/image-13.jpg');
+	}
+	.photo.c14{
+		background-image:url('copenhagen/image-14.jpg');
+	}
+
+/*Photoset Helsinki*/
+	.photo.h1{
+		background-image:url('helsinki/image-1.jpg');
+	}
+	.photo.h2{
+		background-image:url('helsinki/image-2.jpg');
+	}
+	.photo.h3{
+		background-image:url('helsinki/image-3.jpg');
+	}
+	.photo.h4{
+		background-image:url('helsinki/image-4.jpg');
+	}
+	.photo.h5{
+		background-image:url('helsinki/image-5.jpg');
+	}
+	.photo.h6{
+		background-image:url('helsinki/image-6.jpg');
+	}
+	.photo.h7{
+		background-image:url('helsinki/image-7.jpg');
+	}
+	.photo.h8{
+		background-image:url('helsinki/image-8.jpg');
+	}
+	.photo.h9{
+		background-image:url('helsinki/image-9.jpg');
+	}
+	.photo.h10{
+		background-image:url('helsinki/image-10.jpg');
+	}
+	.photo.h11{
+		background-image:url('helsinki/image-11.jpg');
+	}
+	.photo.h12{
+		background-image:url('helsinki/image-12.jpg');
+	}
+	.photo.h13{
+		background-image:url('helsinki/image-13.jpg');
+	}
+	.photo.h14{
+		background-image:url('helsinki/image-14.jpg');
+	}
+	.photo.h15{
+		background-image:url('helsinki/image-15.jpg');
+	}
+	.photo.h16{
+		background-image:url('helsinki/image-16.jpg');
+	}
+	.photo.h17{
+		background-image:url('helsinki/image-17.jpg');
+	}
+
+/*Photoset Stockholm*/
+	.photo.s1{
+		background-image:url('stockholm/image-1.jpg');
+	}
+	.photo.s2{
+		background-image:url('stockholm/image-2.jpg');
+	}
+	.photo.s3{
+		background-image:url('stockholm/image-3.jpg');
+	}
+	.photo.s4{
+		background-image:url('stockholm/image-4.jpg');
+	}
+	.photo.s5{
+		background-image:url('stockholm/image-5.jpg');
+	}
+	.photo.s6{
+		background-image:url('stockholm/image-6.jpg');
+	}
+	.photo.s7{
+		background-image:url('stockholm/image-7.jpg');
+	}
+	.photo.s8{
+		background-image:url('stockholm/image-8.jpg');
+	}
+	.photo.s9{
+		background-image:url('stockholm/image-9.jpg');
+	}
+	.photo.s10{
+		background-image:url('stockholm/image-10.jpg');
+	}
+
+/*Photoset Talinn*/
+	.photo.t1{
+		background-image:url('talinn/image-1.jpg');
+	}
+	.photo.t2{
+		background-image:url('talinn/image-2.jpg');
+	}
+	.photo.t3{
+		background-image:url('talinn/image-3.jpg');
+	}
+	.photo.t4{
+		background-image:url('talinn/image-4.jpg');
+	}
+	.photo.t5{
+		background-image:url('talinn/image-5.jpg');
+	}
+	.photo.t6{
+		background-image:url('talinn/image-6.jpg');
+	}
+	.photo.t7{
+		background-image:url('talinn/image-7.jpg');
+	}
+	.photo.t8{
+		background-image:url('talinn/image-8.jpg');
+	}
+	.photo.t9{
+		background-image:url('talinn/image-9.jpg');
+	}
+	.photo.t10{
+		background-image:url('talinn/image-10.jpg');
+	}
+	.photo.t11{
+		background-image:url('talinn/image-11.jpg');
+	}
+	.photo.t12{
+		background-image:url('talinn/image-12.jpg');
+	}
+
+/*Photoset Oslo*/
+	.photo.o1{
+		background-image:url('oslo/image-1.jpg');
+	}
+	.photo.o2{
+		background-image:url('oslo/image-2.jpg');
+	}
+	.photo.o3{
+		background-image:url('oslo/image-3.jpg');
+	}
+	.photo.o4{
+		background-image:url('oslo/image-4.jpg');
+	}
+	.photo.o5{
+		background-image:url('oslo/image-5.jpg');
+	}
+	.photo.o6{
+		background-image:url('oslo/image-6.jpg');
+	}
+	.photo.o7{
+		background-image:url('oslo/image-7.jpg');
+	}
+	.photo.o8{
+		background-image:url('oslo/image-8.jpg');
+	}
+	.photo.o9{
+		background-image:url('oslo/image-9.jpg');
+	}
+	.photo.o10{
+		background-image:url('oslo/image-10.jpg');
+	}
+	.photo.o11{
+		background-image:url('oslo/image-11.jpg');
+	}
+
+/*Photoset Berlin*/
+	.photo.b1{
+		background-image:url('berlin/image-1.jpg');
+	}
+	.photo.b2{
+		background-image:url('berlin/image-2.jpg');
+	}
+	.photo.b3{
+		background-image:url('berlin/image-3.jpg');
+	}
+	.photo.b4{
+		background-image:url('berlin/image-4.jpg');
+	}
+	.photo.b5{
+		background-image:url('berlin/image-5.jpg');
+	}
+	.photo.b6{
+		background-image:url('berlin/image-6.jpg');
+	}
+	.photo.b7{
+		background-image:url('berlin/image-7.jpg');
+	}
+	.photo.b8{
+		background-image:url('berlin/image-8.jpg');
+	}
+	.photo.b9{
+		background-image:url('berlin/image-9.jpg');
+	}
+	.photo.b10{
+		background-image:url('berlin/image-10.jpg');
+	}
+	.photo.b11{
+		background-image:url('berlin/image-11.jpg');
+	}
+	.photo.b12{
+		background-image:url('berlin/image-12.jpg');
+	}
+	.photo.b13{
+		background-image:url('berlin/image-13.jpg');
+	}
+	.photo.b14{
+		background-image:url('berlin/image-14.jpg');
+	}
+	.photo.b15{
+		background-image:url('berlin/image-15.jpg');
+	}
+	.photo.b16{
+		background-image:url('berlin/image-16.jpg');
+	}
+	.photo.b17{
+		background-image:url('berlin/image-17.jpg');
+	}
+	.photo.b18{
+		background-image:url('berlin/image-18.jpg');
+	}
+	.photo.b19{
+		background-image:url('berlin/image-19.jpg');
+	}
+	.photo.b20{
+		background-image:url('berlin/image-20.jpg');
+	}
+	.photo.b21{
+		background-image:url('berlin/image-21.jpg');
+	}
+	.photo.b22{
+		background-image:url('berlin/image-22.jpg');
+	}
+	.photo.b23{
+		background-image:url('berlin/image-23.jpg');
+	}
+	.photo.b24{
+		background-image:url('berlin/image-24.jpg');
+	}
+	.photo.b25{
+		background-image:url('berlin/image-25.jpg');
+	}
+	.photo.b26{
+		background-image:url('berlin/image-26.jpg');
+	}
+	.photo.b27{
+		background-image:url('berlin/image-27.jpg');
+	}

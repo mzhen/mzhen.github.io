@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php include 'navigation.php'; ?>
-	<nav>
+<!-- 	<nav>
 	<ul>
 		<li onClick="randomlinkscopen()" id="copenhagen">#Copenhagen</li>
 		<li onClick="randomlinksstoc()" id="stockholm">#Stockholm</li>
@@ -22,7 +22,7 @@
 		<li onClick="randomlinksoslo()" id="oslo">#Oslo</li>
 		<li onClick="randomlinksberl()" id="berlin">#Berlin</li>
 	</ul>
-	</nav>
+	</nav> -->
 	<div class="photo"></div>
 </body>
 </html>
