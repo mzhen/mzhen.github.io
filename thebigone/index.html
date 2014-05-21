@@ -152,7 +152,7 @@ color:dodgerblue;
 						desc = weather.currently;
 						var pressure = Math.floor(weather.pressure);
 
-						$("#heytext").html("Hey, it is "+ weather.highAlt +"&deg; and " + weather.currently+" in Vancouver today. ");
+						$("#heytext").html("Hey, it is "+ weather.highAlt +"&deg; and " + weather.currently+" in Vancouver today, ");
 					},
 					error: function(error){
 						console.log(error);
@@ -227,7 +227,14 @@ color:dodgerblue;
 </head>
 <body>
 
-	<div class="clock">
+
+	
+		<div class="countdown" id="txt">
+		<div class="heytext" id="heytext"></div>,
+		<span id="timer"></span> 
+
+
+			<div class="clock">
 			<ul id="digital-clock" class="digital">
 			<li class="hour"></li>
 			<li class="min"></li>
@@ -236,10 +243,7 @@ color:dodgerblue;
 			</ul>
 
 	</div>
-	
-		<div class="countdown" id="txt">
-		<div class="heytext" id="heytext"></div>and
-		<span id="timer"></span> days since the last Megathrust earthquake.
+		days since the last Megathrust earthquake.
 		</div>
 
 	<iframe src="https://en.wikipedia.org/wiki/Megathrust_earthquake" width="100%" height="100%" class="shake wiki" id="frame"></iframe>
