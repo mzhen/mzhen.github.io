@@ -76,30 +76,12 @@ li{
 color:dodgerblue;
 }
 
-	.clock{
-		font-size:25px;
-		text-align:right;
-		position:absolute;
-		right:7px;
+.clock{
+		display:inline;
+		font-size:80px;
 		color:dodgerblue;
 		text-shadow: 1px 1px 1px #666;
-	}
-
-.cloudy{
-	position:absolute;
-	right:-400px;
-	bottom:-100px;
 }
-
-/*.rainy{
-	height:100%;
-	width:100%;
-	position:absolute;
-	background-size:cover;
-	background-repeat: no-repeat;
-}
-*/
-
 
 .heytext{
 	display:inline;
@@ -110,18 +92,6 @@ color:dodgerblue;
 	color:dodgerblue;
 	text-decoration:underline;
 }
-
-#cloudy{
-	display:none;
-}
-
-#sunny{
-	display:none;
-	position:absolute;
-	width:100%;
-	height:100%;
-}
-
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -152,7 +122,7 @@ color:dodgerblue;
 						desc = weather.currently;
 						var pressure = Math.floor(weather.pressure);
 
-						$("#heytext").html("Hey, it is "+ weather.highAlt +"&deg; and " + weather.currently+" in Vancouver today, ");
+						$("#heytext").html("Hey, it is "+ weather.highAlt +"&deg; and " + weather.currently+" in Vancouver today ");
 					},
 					error: function(error){
 						console.log(error);
@@ -230,20 +200,18 @@ color:dodgerblue;
 
 	
 		<div class="countdown" id="txt">
-		<div class="heytext" id="heytext"></div>,
-		<span id="timer"></span> 
+		<div class="heytext" id="heytext"></div>, and
+		<span id="timer"></span>days,
 
-
-			<div class="clock">
+			<div class="clock" id="clock">
 			<ul id="digital-clock" class="digital">
 			<li class="hour"></li>
 			<li class="min"></li>
 			<li class="sec"></li>
 			<li class="meridiem"></li>
 			</ul>
-
-	</div>
-		days since the last Megathrust earthquake.
+			</div>
+		hours since the last Megathrust earthquake.
 		</div>
 
 	<iframe src="https://en.wikipedia.org/wiki/Megathrust_earthquake" width="100%" height="100%" class="shake wiki" id="frame"></iframe>
