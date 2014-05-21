@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+	<style type="text/css">
+
+	</style>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="weather/jquery.simpleWeather.min.js"></script>
+	<script>
+		$(function(){
+
+			var updateWeather = function(location, unit){
+				$.simpleWeather({
+					location: location,
+					unit: 'f',
+					success: function(weather){
+						console.log(weather);
+
+						var pressure = Math.floor(weather.pressure);
+
+						$("body").css("background-color", "rgb("+ weather.temp + "," 
+						+ pressure + "," + weather.heatindex+ ")");
+						$("#city").html(weather.city);
+					},
+					error: function(error){
+						console.log(error);
+						
+					}
+				});
+			};
+
+			$("#submit").click(function(){
+				var location = $("#location").val();
+				updateWeather(location, "f");
+			});
+		});
+
+	</script>
+
+<body>
+
+	API
+		what is an application programming interface
+			-get things (etc...getting things by tag...user) - alot simpler
+			-post things
+		interface for two programs to talk to each other
+
+	<h1 id="temp"></h1>
+	<h2 id="city"></h2>
+
+	<input id="location" type="text"> <a id="submit" href="#">submit</a>
+
+
+
+</body>
+</html>

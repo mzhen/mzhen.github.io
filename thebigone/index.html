@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Big One</title>
+	<style>
+	html{
+		height:100%;
+		width:100%;
+		margin:0px;
+		padding:0px;
+	}
+	body{
+		/*background: linear-gradient(grey, white);*/
+		height:100%;
+		font-family:'apercu';
+		margin:0px;
+		padding:0px;
+	}
+
+	body::-webkit-scrollbar { width: 0 !important }
+	iframe::-webkit-scrollbar { width: 0 !important }
+
+	iframe{
+		border:0px;
+	}
+
+	@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(1px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-2px, 1px) rotate(1deg); }
+	30% { -webkit-transform: translate(1px, 2px) rotate(2deg); }
+	40% { -webkit-transform: translate(2px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-2px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -1px) rotate(-2deg); }
+}
+.shake{
+	display:inline-block;
+}
+.quake{
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: .5s;
+	-webkit-transform-origin:50% 50%;
+/*	-webkit-animation-iteration-count: infinite;*/
+	-webkit-animation-timing-function: linear;
+}
+
+ul{
+	list-style: none;
+	display:inline-block;
+	padding-left:0px;
+	margin-left:0px;
+	padding-top:0px;
+	margin-top:7px;
+
+}
+
+li{
+	display:inline-block;
+	padding-left:0px;
+	margin-left:0px;
+}
+
+
+.countdown{
+	font-size:80px;
+	width:900px;
+	position:absolute;
+	top:0px;
+	left:14px;
+	text-shadow: 1px 3px 4px #ccc;
+/*text-shadow: 4px 4px 0 #cccccc;*/
+color:dodgerblue;
+}
+
+	.clock{
+		font-size:25px;
+		text-align:right;
+		position:absolute;
+		right:7px;
+		color:dodgerblue;
+		text-shadow: 1px 1px 1px #666;
+	}
+
+.cloudy{
+	position:absolute;
+	right:-400px;
+	bottom:-100px;
+}
+
+/*.rainy{
+	height:100%;
+	width:100%;
+	position:absolute;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+*/
+
+
+.heytext{
+	display:inline;
+}
+
+#timer{
+	display:inline;
+	color:dodgerblue;
+	text-decoration:underline;
+}
+
+#cloudy{
+	display:none;
+}
+
+#sunny{
+	display:none;
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="jquery.clock.js"></script>
+<script src="jquery.tinytimer.min.js"></script>
+<script src="weather/jquery.zweatherfeed.min.js" type="text/javascript"></script>
+<script src="weather2/jquery.simpleWeather.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+	$(document).ready(function(){
+
+	var d = new Date('January 26, 1700');
+	$('#timer').tinyTimer({ from: d, format: '%d' });
+
+	$('#digital-clock').clock({offset: '-7', type: 'digital'});
+
+
+			var desc;
+
+			var updateWeather = function(location, unit){
+				$.simpleWeather({
+					location: "vancouver, canada",
+					unit: 'f',
+					
+					success: function(weather){
+						console.log(weather);
+						desc = weather.currently;
+						var pressure = Math.floor(weather.pressure);
+
+						$("#heytext").html("Hey, it is "+ weather.highAlt +"&deg; and " + weather.currently+" in Vancouver today. ");
+					},
+					error: function(error){
+						console.log(error);
+					}
+				});
+			};
+			updateWeather();
+
+
+		if(desc = "Partly Cloudy") {
+				$("#cloudy").css("display","block");
+				// $("#sunny").css("display","none");
+		} 
+		else if(desc = "Mostly Cloudy"){
+			$("#cloudy").css("display","block");
+			$("#sunny").css("display","none");
+		}
+		else if(desc = "Sunny"){
+			$("#sunny").css("display","block");
+			$("#cloudy").css("display","none");
+		}
+
+
+ 
+
+	 var locations = ["http://earthquaketrack.com/r/vancouver-island-canada/recent", 
+	 	"http://www.cbc.ca/news/canada/british-columbia/b-c-due-for-mega-earthquake-along-coast-1.1381733",
+	 	"http://www.huffingtonpost.ca/2012/11/04/tsunami-flooding-storm-surge-vancouver-richmond-earthquake_n_2066649.html",
+	 	"http://geology.about.com/od/quake_preparedness/a/aa_cascadiaEQ.htm",
+	 	"https://en.wikipedia.org/wiki/Megathrust_earthquake",
+	 	"http://www.earthquakescanada.nrcan.gc.ca/zones/cascadia/mega-eng.php",
+	 	"http://seattletimes.com/html/pacificnw/2021850265_1006coverearthquake1xml.html",
+	 	"http://www.ibtimes.com/mega-earthquake-forecasted-hit-british-columbia-pacific-coast-first-time-11000-years-1305845"
+
+	 	];
+        var len = locations.length;
+        var iframe = $('#frame');
+        var i = 0;
+
+  setInterval(function(){
+  		var randomnum=Math.floor(Math.random()*8)
+  		 iframe.attr('src', locations[randomnum % len]);
+  		 $("#frame").effect("shake");
+  		 console.log("triggered!");
+  },12000);
+
+
+
+
+     //    var rainyOverlay = $('.rainy');
+   		// var backgrounds = [
+	    //   'url(rainy.svg)', 
+	    //   'url(rainy2.svg)'];
+   		// var current = 0;
+
+	    // function nextBackground() {
+	    //     rainyOverlay.css(
+	    //         'background',
+	    //     backgrounds[current = ++current % backgrounds.length]);
+
+	    //     setTimeout(nextBackground, 800);
+	    // }
+	    // setTimeout(nextBackground, 800);
+	    // body.css('background', backgrounds[0]);
+
+
+});
+</script>
+
+
+
+</head>
+<body>
+
+<div class="cloudy" id="cloudy"><img src="cloudy.svg"></div>
+<div class="sunny" id="sunny"><img src="sunny.svg" class="sunnysvg" width="1674px"></div>
+<div class="rainy"></div>
+	<div class="clock">
+			<ul id="digital-clock" class="digital">
+			<li class="hour"></li>
+			<li class="min"></li>
+			<li class="sec"></li>
+			<li class="meridiem"></li>
+			</ul>
+
+	</div>
+	
+		<div class="countdown" id="txt">
+		<div class="heytext" id="heytext"></div>and
+		<span id="timer"></span> days since the last Megathrust earthquake.
+		</div>
+
+	<iframe src="https://en.wikipedia.org/wiki/Megathrust_earthquake" width="100%" height="100%" class="shake wiki" id="frame"></iframe>
+</body>
+</html>
