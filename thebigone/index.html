@@ -22,6 +22,7 @@
 
 	iframe{
 		border:0px;
+
 	}
 
 	@-webkit-keyframes spaceboots {
@@ -50,7 +51,7 @@
 
 ul{
 	list-style: none;
-	display:inline-block;
+	display:inline;
 	padding-left:0px;
 	margin-left:0px;
 	padding-top:0px;
@@ -61,9 +62,11 @@ ul{
 }
 
 li{
-	display:inline-block;
+	display:inline;
 	padding-left:0px;
 	margin-left:0px;
+	margin-right:0px;
+	padding-right:0px;
 			padding-bottom:0px;
 		margin-bottom:0px;
 		margin-top:0px;
@@ -71,34 +74,43 @@ li{
 
 
 .countdown{
-	font-size:80px;
+	font-size:90px;
 	width:900px;
 	position:absolute;
 	top:0px;
 	left:14px;
-	text-shadow: 1px 3px 4px #ccc;
 /*text-shadow: 4px 4px 0 #cccccc;*/
-color:dodgerblue;
+color:#3399ff;
+display:inline;
+
+text-shadow: 1px 1px #e6e6e6, 
+                2px 2px #e6e6e6, 
+                3px 3px #e6e6e6, 
+                4px 4px #e6e6e6, 
+                5px 5px #e6e6e6, 
+                6px 6px #e6e6e6;
 }
 
 .clock{
-		display:inline-block;
-		font-size:80px;
-		color:dodgerblue;
-		text-shadow: 1px 1px 1px #666;
+		display:inline;
+		font-size:90px;
+		color:#3399ff;
 		padding-bottom:0px;
 		margin-bottom:0px;
+
+text-shadow: 1px 1px #e6e6e6, 
+                2px 2px #e6e6e6, 
+                3px 3px #e6e6e6, 
+                4px 4px #e6e6e6, 
+                5px 5px #e6e6e6, 
+                6px 6px #e6e6e6;
 }
 
 .heytext{
 	display:inline;
 }
 
-#timer{
-	display:inline;
-	color:dodgerblue;
-	text-decoration:underline;
-}
+
 </style>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -156,13 +168,20 @@ color:dodgerblue;
  
 
 	 var locations = ["http://earthquaketrack.com/r/vancouver-island-canada/recent", 
-	 	"http://www.cbc.ca/news/canada/british-columbia/b-c-due-for-mega-earthquake-along-coast-1.1381733",
 	 	"http://www.huffingtonpost.ca/2012/11/04/tsunami-flooding-storm-surge-vancouver-richmond-earthquake_n_2066649.html",
 	 	"http://geology.about.com/od/quake_preparedness/a/aa_cascadiaEQ.htm",
-	 	"https://en.wikipedia.org/wiki/Megathrust_earthquake",
-	 	"http://www.earthquakescanada.nrcan.gc.ca/zones/cascadia/mega-eng.php",
-	 	"http://seattletimes.com/html/pacificnw/2021850265_1006coverearthquake1xml.html",
-	 	"http://www.ibtimes.com/mega-earthquake-forecasted-hit-british-columbia-pacific-coast-first-time-11000-years-1305845"
+	 	"http://en.wikipedia.org/wiki/1700_Cascadia_earthquake",
+	 	"http://midislandnews.com/vancouver-island-marine-communication/earthquake-map-of-vancouver-island",
+	 	"https://www.facebook.com/earthquakewatch",
+	 	"http://swni.org/ep/cascadia",
+	 	"http://www.cascadiahazards.org/index.php?option=com_content&view=article&id=21&Itemid=133",
+	 	"http://discovermagazine.com/2012/extreme-earth/01-big-one-earthquake-could-devastate-pacific-northwest",
+	 	"http://news.discovery.com/earth/megaquake-schedule-pacific-northwest.htm",
+	 	"http://www.seattlepi.com/national/article/New-Canadian-study-confirms-megathrust-earthquake-4596707.php",
+	 	"http://focusonline.ca/?q=node/262",
+	 	"http://www.scq.ubc.ca/the-big-one-understanding-why-the-big-earthquake-is-predicted-for-vancouver/",
+	 	"http://www.sciencedaily.com/releases/2006/04/060417110331.htm"
+
 
 	 	];
         var len = locations.length;
@@ -170,7 +189,7 @@ color:dodgerblue;
         var i = 0;
 
   setInterval(function(){
-  		var randomnum=Math.floor(Math.random()*8)
+  		var randomnum=Math.floor(Math.random()*14)
   		 iframe.attr('src', locations[randomnum % len]);
   		 // $("#frame").effect("shake");
   		 // console.log("triggered!");
@@ -212,14 +231,12 @@ color:dodgerblue;
 
 			<div class="clock" id="clock">
 			<ul id="digital-clock" class="digital">
-			<li class="hour"></li> Hours,
-			<li class="min"></li> Minutes and
-			<li class="sec"></li> Seconds
+			<li class="hour"></li> Hours, <li class="min"></li> Minutes and <li class="sec"></li> Seconds
 			</ul>
 			</div>
 		since the last Megathrust earthquake.
 		</div>
 
-	<iframe src="https://en.wikipedia.org/wiki/Megathrust_earthquake" width="100%" height="100%" class="shake wiki" id="frame"></iframe>
+	<iframe src="http://en.wikipedia.org/wiki/1700_Cascadia_earthquake" width="100%" height="100%" class="shake wiki" id="frame"></iframe>
 </body>
 </html>
