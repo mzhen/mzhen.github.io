@@ -13,6 +13,7 @@
 		/*background: linear-gradient(grey, white);*/
 		height:100%;
 		font-family:'apercu';
+		font-weight:bold;
 		margin:0px;
 		padding:0px;
 	}
@@ -83,12 +84,12 @@ li{
 color:#3399ff;
 display:inline;
 
-text-shadow: 1px 1px #e6e6e6, 
-                2px 2px #e6e6e6, 
-                3px 3px #e6e6e6, 
-                4px 4px #e6e6e6, 
-                5px 5px #e6e6e6, 
-                6px 6px #e6e6e6;
+text-shadow: 1px 1px #555555, 
+                2px 2px #555555, 
+                3px 3px #555555, 
+                4px 4px #555555, 
+                5px 5px #555555, 
+                6px 6px #555555;
 }
 
 .clock{
@@ -98,18 +99,56 @@ text-shadow: 1px 1px #e6e6e6,
 		padding-bottom:0px;
 		margin-bottom:0px;
 
-text-shadow: 1px 1px #e6e6e6, 
-                2px 2px #e6e6e6, 
-                3px 3px #e6e6e6, 
-                4px 4px #e6e6e6, 
-                5px 5px #e6e6e6, 
-                6px 6px #e6e6e6;
+text-shadow: 1px 1px #555555, 
+                2px 2px #555555, 
+                3px 3px #555555, 
+                4px 4px #555555, 
+                5px 5px #555555, 
+                6px 6px #555555;
 }
 
 .heytext{
 	display:inline;
 }
 
+
+.screen{
+	background-color:#999999;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	opacity: 0.25;
+    filter: alpha(opacity=25);
+
+}
+
+.close{
+	color:#3399ff;
+	font-size:35px;
+	text-shadow: 1px 1px #555555, 
+                2px 2px #555555, 
+                3px 3px #555555;
+
+    position:absolute;
+    top:10px;
+    right:14px;
+        z-index:2;
+}
+
+.info{
+	color:#3399ff;
+	font-size:90px;
+	text-shadow: 1px 1px #555555, 
+                2px 2px #555555, 
+                3px 3px #555555;
+
+    position:absolute;
+    bottom:0px;
+    left:14px;
+        z-index:2;
+}
 
 </style>
 
@@ -196,25 +235,6 @@ text-shadow: 1px 1px #e6e6e6,
   },12000);
 
 
-
-
-     //    var rainyOverlay = $('.rainy');
-   		// var backgrounds = [
-	    //   'url(rainy.svg)', 
-	    //   'url(rainy2.svg)'];
-   		// var current = 0;
-
-	    // function nextBackground() {
-	    //     rainyOverlay.css(
-	    //         'background',
-	    //     backgrounds[current = ++current % backgrounds.length]);
-
-	    //     setTimeout(nextBackground, 800);
-	    // }
-	    // setTimeout(nextBackground, 800);
-	    // body.css('background', backgrounds[0]);
-
-
 });
 </script>
 
@@ -222,9 +242,6 @@ text-shadow: 1px 1px #e6e6e6,
 
 </head>
 <body>
-
-
-	
 		<div class="countdown" id="txt">
 		<div class="heytext" id="heytext"></div>, and
 		<span id="timer"></span> days,
