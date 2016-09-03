@@ -1,0 +1,170 @@
+
+.name{
+	color: #000;
+	font-family:Times;
+	font-size:50pt;
+	position:absolute;
+	left:-70px;
+	top:100px;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.contact{
+	color: #000;
+	font-family:Times;
+	font-size:50pt;
+	position:absolute;
+	left:20px;
+	bottom:45px;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
+
+.index{
+	color: #00fbb5;
+	font-family: 'Times', cursive;
+	font-size:20pt;
+	font-weight:bold;
+	position:fixed;
+	left:2%;
+	top:50px;
+/*  pointer-events: none;*/
+	z-index:2;
+
+}
+
+.items{
+	font-size:25pt;
+	font-weight:normal;
+	position:relative;
+  /*pointer-events: none;*/
+}
+
+.description{
+/*	font-size:12pt;*/
+	padding-left:20px;
+}
+
+.board{
+	z-index: 1;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	overflow:scroll;
+}
+
+.bd{
+	z-index:-111;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+ul{
+	list-style: none;
+	padding:0px;
+}
+
+li{
+	margin-bottom:10px;
+}
+
+li:hover{
+	background-color:blue;
+	cursor:wait;
+}
+
+
+/*.photo{
+	background: transparent;
+	width:100%;
+	height:100%;
+/*	background-repeat: no-repeat;*/
+	background-position:center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size:  cover;
+	background-size: cover;
+	position:relative;
+	top:0%;
+	left:0%;
+	z-index:1;
+	content:" ";*/
+
+}
+
+/*.1{
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size:  cover;
+	background-size: cover;
+	position:relative;
+	top:0%;
+	left:0%;
+	z-index:1;
+	content:" ";
+/*  overflow:scroll;*/
+}*/
+
+html, body {margin:0;padding:0;height:100%;width:100%;}
+
+html{
+	height:100%;
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	height:100%;
+	width:100%;
+	margin:0px;
+	display:block;
+}
+
+.parallax-window {
+    height:110%;
+    width:50%;
+    background: transparent;
+    margin:auto;
+    padding:0px;
+    display:block;
+}
+
+.text{
+	height:auto;
+	width:100%;
+	padding-top:1em;
+	padding-bottom:.5em;
+	text-align:center;
+	font-family:'Lobster Two';
+	font-size:68pt;
+	background:transparent;
+	color:#f5f5f5;
+	position:absolute;
+}
+
+.title{
+	height:auto;
+	width:100%;
+	padding-top:1em;
+	padding-bottom:.5em;
+	text-align:center;
+	font-family:'Lobster Two';
+	font-size:48pt;
+	background:white;
+	position:absolute;
+}
