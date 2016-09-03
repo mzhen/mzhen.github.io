@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jeni Zhen</title>
+	<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:700,400italic' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+
+	<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+ 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+
+	
+ <script>
+
+
+$(document).ready(function() {
+    // $('.hoverBox').css('background', 'url(img/box' + id + '.jpg)')  
+
+    $('.select1').hover(function(){
+    $( '.photo' ).html('<img src="tb/1.jpg"></img>')
+    },
+    function(){
+    $( '.photo' ).html('')                  
+    });
+
+    $('.select2').hover(function(){
+    $( '.photo' ).html('<img src="tb/2.jpg"></img>')
+    },
+    function(){
+    $( '.photo' ).html('')                  
+    });
+
+    $('.select3').hover(function(){
+    $( '.photo' ).html('<img src="tb/3.jpg"></img>')
+    },
+    function(){
+    $( '.photo' ).html('')                  
+    });
+
+    $('.select4').hover(function(){
+    $( '.photo' ).html('<img src="tb/4.jpg"></img>')
+    },
+    function(){
+    $( '.photo' ).html('')                  
+    });
+
+});
+
+ </script>
+
+
+<body>
+
+
+<div class="board">
+
+<!-- <div class="contact"><i><b>Contact</b></i></div> -->
+
+	<div class="index">
+		<div class="items">
+			<ul>
+			<li class="select1">Photo</li>
+			<li class="select2">Collection</li>
+			<li class="select3">Coming</li>
+			<li class="select4">Soon</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="size">
+	<div class="photo">
+	</div>
+	</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
