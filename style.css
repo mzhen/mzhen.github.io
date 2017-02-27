@@ -1,0 +1,8 @@
+.article-editor-frame-root{
+  width: 375px;
+  height: 667px;
+  overflow: scroll;
+  box-shadow: 0 3px 6px rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.1);
+  margin: 40px auto;
+}
